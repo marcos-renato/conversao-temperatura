@@ -35,6 +35,6 @@ jobs:
             file: src/Dockerfile
             push: true
             tags: |
-              marcosrenato/aula-converte-temperatura: ${{github.run_number}}
+              marcosrenato/aula-converte-temperatura:${{github.run_number}}
               marcosrenato/aula-converte-temperatura:latest
 
