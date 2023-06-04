@@ -37,3 +37,4 @@ jobs:
             tags: |
               marcosrenato/aula-converte-temperatura:v1
               marcosrenato/aula-converte-temperatura:latest
+
