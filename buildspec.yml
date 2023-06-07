@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t converte-temperatura-devops-avancado .
+      - docker build -t converte-temperatura-devops-avancado -f Dockerfile ./src
       - docker tag converte-temperatura-devops-avancado:latest 189450513220.dkr.ecr.us-east-1.amazonaws.com/converte-temperatura-devops-avancado:latest
       
   post_build:
