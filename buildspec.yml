@@ -13,16 +13,16 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t conversao-temperatura .
-      - docker tag conversao-temperatura:latest 189450513220.dkr.ecr.us-east-1.amazonaws.com/conversao-temperatura:latest
+      - docker build -t converte-temperatura-devops-avancado .
+      - docker tag converte-temperatura-devops-avancado:latest 189450513220.dkr.ecr.us-east-1.amazonaws.com/converte-temperatura-devops-avancado:latest
       
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 189450513220.dkr.ecr.us-east-1.amazonaws.com/conversao-temperatura:latest
+      - docker push 189450513220.dkr.ecr.us-east-1.amazonaws.com/converte-temperatura-devops-avancado:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"conversao-temperatura","imageUri":"%s"}]' 189450513220.dkr.ecr.us-east-1.amazonaws.com/conversao-temperatura:latest > imagedefinitions.json
+      - printf '[{"name":"conversao-temperatura","imageUri":"%s"}]' 189450513220.dkr.ecr.us-east-1.amazonaws.com/converte-temperatura-devops-avancado:latest > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
     files: 
